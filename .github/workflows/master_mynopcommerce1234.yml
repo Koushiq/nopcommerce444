@@ -23,10 +23,10 @@ jobs:
           include-prerelease: true
 
       - name: Build with dotnet
-        run: cd src || dotnet build NopCommerce.sln --configuration Release
+        run: dotnet build "src/NopCommerce.sln" --configuration Release
 
       - name: dotnet publish
-        run: cd src || dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish "src/NopCommerce.sln" -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
