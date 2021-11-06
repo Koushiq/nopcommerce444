@@ -39,7 +39,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ https://nopcommerce444.azurewebsites.net }}
+      url: https://nopcommerce444.azurewebsites.net
 
     steps:
       - name: Download artifact from build job
